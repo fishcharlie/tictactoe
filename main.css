@@ -10,3 +10,9 @@
 .rightBorder {
 	border-right: 1px solid #808080;
 }
+.gameGrid {
+	height: 750px;
+	width: 750px;
+	margin: auto;
+	font-size: 0;
+}
