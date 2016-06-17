@@ -16,6 +16,7 @@
 	width: 30%;
 	display: inline-block;
 	font-size: 12pt;
+	vertical-align: top; /* makes cell not drop down if text in cell */
 }
 
 .gameGrid {
