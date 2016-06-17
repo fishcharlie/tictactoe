@@ -10,6 +10,13 @@
 .rightBorder {
 	border-right: 1px solid #808080;
 }
+
+.gameCell {
+	height: 30%;
+	width: 30%;
+	display: inline-block;
+}
+
 .gameGrid {
 	height: 750px;
 	width: 750px;
