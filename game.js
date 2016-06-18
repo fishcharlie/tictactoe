@@ -65,14 +65,16 @@ function move(id) {
 }
 
 function changeMove() {
-	if (whosTurn == 'X') {
-		whosTurn = 'O';
+	if (winnerStatus === false) {
+		if (whosTurn == 'X') {
+			whosTurn = 'O';
+		}
+		else if (whosTurn == 'O') {
+			whosTurn = 'X';
+		}
+		var infoText = document.getElementsByClassName('infoText')[0];
+		infoText.textContent = whosTurn + '\'s Turn!';
 	}
-	else if (whosTurn == 'O') {
-		whosTurn = 'X';
-	}
-	var infoText = document.getElementsByClassName('infoText')[0];
-	infoText.textContent = whosTurn + '\'s Turn!';
 }
 
 function clearBoard() {
