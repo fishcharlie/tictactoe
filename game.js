@@ -50,6 +50,7 @@ function move(id) {
 			setCell(whosTurn,id[0],id[1]);
 			changeMove();
 			checkBoard();
+			checkTie();
 		}
 	}
 }
@@ -124,6 +125,23 @@ function winner(winnerXO, arrayOfWinnerTiles) {
 
 	var infoText = document.getElementsByClassName('infoText')[0];
 	infoText.textContent = winnerXO + ' wins!!!';
+}
+
+function checkTie() {
+	if (winnerStatus !== true) {
+		var tilesUsed = 0;
+		for (var x = 0; x < gameArray.length; x++) {
+			for (var y = 0; y < gameArray[x].length; y++) {
+				if (gameArray[x][y] != '.') {
+					tilesUsed++;
+				}
+			}
+		}
+		if (tilesUsed == 9) {
+			var infoText = document.getElementsByClassName('infoText')[0];
+			infoText.textContent = 'Tie Game';
+		}
+	}
 }
 
 function start() {
