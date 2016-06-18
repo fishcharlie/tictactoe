@@ -19,11 +19,19 @@ function setCell(value, x, y) {
 		cell.classList.add('x');
 		cell.textContent = 'X';
 		gameArray[x][y] = 'X';
+		checkBoard();
+		if (winnerStatus !== true) {
+			cell.classList.add('animatexclass');
+		}
 	}
 	else if (value == 'O') {
 		cell.classList.add('o');
 		cell.textContent = 'O';
 		gameArray[x][y] = 'O';
+		checkBoard();
+		if (winnerStatus !== true) {
+			cell.classList.add('animateoclass');
+		}
 	}
 	else if (value == '.'){
 		clearCell(x, y);
@@ -51,7 +59,6 @@ function move(id) {
 		if (gameArray[id[0]][id[1]] == '.') {
 			setCell(whosTurn,id[0],id[1]);
 			changeMove();
-			checkBoard();
 			checkTie();
 		}
 	}
