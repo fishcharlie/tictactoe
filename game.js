@@ -50,5 +50,17 @@ function move(id) {
 		changeMove();
 	}
 }
+
+function changeMove() {
+	if (whosTurn == 'X') {
+		whosTurn = 'O';
+	}
+	else if (whosTurn == 'O') {
+		whosTurn = 'X';
+	}
+	var infoText = document.getElementsByClassName('infoText')[0];
+	infoText.textContent = whosTurn + '\'s Turn!';
+}
+
 function start() {
 }
