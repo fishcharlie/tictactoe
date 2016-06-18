@@ -15,6 +15,11 @@
 	text-align: center;
 }
 
+.title {
+	font-size: 40pt;
+	margin: 0;
+}
+
 .clearButton {
 	background-color: #555555;
 	border: none;
