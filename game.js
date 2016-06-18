@@ -13,10 +13,6 @@ function checkView(gameArray) {
 }
 
 function setCell(value, x, y) {
-	console.log(value);
-	console.log(x);
-	console.log(y);
-
 	var cell = document.getElementById(x.toString() + y.toString());
 	if (value == 'X') {
 		cell.classList.add('x');
