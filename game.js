@@ -34,9 +34,11 @@ function clearCell(x, y) {
 	var cell = document.getElementById(x.toString() + y.toString());
 	if (cell.classList.contains('x')) {
 		cell.classList.remove('x');
+		cell.classList.remove('animatexclass');
 	}
 	if (cell.classList.contains('o')) {
 		cell.classList.remove('o');
+		cell.classList.remove('animateoclass');
 	}
 	if (cell.classList.contains('winnerCell')) {
 		cell.classList.remove('winnerCell');
