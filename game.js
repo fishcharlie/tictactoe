@@ -32,5 +32,16 @@ function setCell(value, x, y) {
 		clearCell(x, y);
 	}
 }
+
+function clearCell(x, y) {
+	var cell = document.getElementById(x.toString() + y.toString());
+	if (cell.classList.contains('x')) {
+		cell.classList.remove('x');
+	}
+	if (cell.classList.contains('o')) {
+		cell.classList.remove('o');
+	}
+	cell.textContent = '';
+}
 function start() {
 }
