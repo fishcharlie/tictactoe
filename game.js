@@ -11,5 +11,26 @@ function checkView(gameArray) {
 		}
 	}
 }
+
+function setCell(value, x, y) {
+	console.log(value);
+	console.log(x);
+	console.log(y);
+
+	var cell = document.getElementById(x.toString() + y.toString());
+	if (value == 'X') {
+		cell.classList.add('x');
+		cell.textContent = 'X';
+		gameArray[x][y] = 'X';
+	}
+	else if (value == 'O') {
+		cell.classList.add('o');
+		cell.textContent = 'O';
+		gameArray[x][y] = 'O';
+	}
+	else if (value == '.'){
+		clearCell(x, y);
+	}
+}
 function start() {
 }
