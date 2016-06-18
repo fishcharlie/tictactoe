@@ -58,5 +58,13 @@ function changeMove() {
 	infoText.textContent = whosTurn + '\'s Turn!';
 }
 
+function clearBoard() {
+	gameArray = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
+	checkView(gameArray);
+	whosTurn = 'X';
+	var infoText = document.getElementsByClassName('infoText')[0];
+	infoText.textContent = whosTurn + '\'s Turn!';
+}
+
 function start() {
 }
