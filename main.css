@@ -12,8 +12,8 @@
 }
 
 .gameCell {
-	height: 30%;
-	width: 30%;
+	height: 33%;
+	width: 33%;
 	display: inline-block;
 	font-size: 12pt;
 	vertical-align: top; /* makes cell not drop down if text in cell */
@@ -29,7 +29,7 @@
 .x {
 	background: blue;
 	font-weight: bold;
-	font-size: 150pt;
+	font-size: 170pt;
 	color: white;
 	text-align: center;
 
@@ -47,7 +47,7 @@
 .o {
 	background: red;
 	font-weight: bold;
-	font-size: 150pt;
+	font-size: 170pt;
 	color: white;
 	text-align: center;
 
