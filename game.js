@@ -43,5 +43,12 @@ function clearCell(x, y) {
 	}
 	cell.textContent = '';
 }
+
+function move(id) {
+	if (gameArray[id[0]][id[1]] == '.') {
+		setCell(whosTurn,id[0],id[1]);
+		changeMove();
+	}
+}
 function start() {
 }
