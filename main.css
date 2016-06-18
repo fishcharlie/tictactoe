@@ -23,5 +23,21 @@
 	height: 750px;
 	width: 750px;
 	margin: auto;
-	font-size: 0;
+	font-size: 0; /* removes white space in container */
+}
+
+.x {
+	background: blue;
+	font-weight: bold;
+	font-size: 150pt;
+	color: white;
+	text-align: center;
+}
+
+.o {
+	background: red;
+	font-weight: bold;
+	font-size: 150pt;
+	color: white;
+	text-align: center;
 }
