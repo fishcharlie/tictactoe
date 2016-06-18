@@ -36,6 +36,8 @@
 }
 
 .animatexclass {
+	-moz-animation-name: animatex;
+	-moz-animation-duration: 1s;
 	-webkit-animation-name: animatex; /* Chrome, Safari, Opera */
 	-webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
 	animation-name: animatex;
@@ -52,6 +54,8 @@
 }
 
 .animateoclass {
+	-moz-animation-name: animateo;
+	-moz-animation-duration: 1s;
 	-webkit-animation-name: animateo; /* Chrome, Safari, Opera */
 	-webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
 	animation-name: animateo;
@@ -68,61 +72,61 @@
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes animatex {
-    0%   {background-color: rgba(0, 0, 255, 0);}
-	10%   {background-color: rgba(0, 0, 255, .1);}
-    20%  {background-color: rgba(0, 0, 255, .2);}
-	30%  {background-color: rgba(0, 0, 255, .3);}
-	40%  {background-color: rgba(0, 0, 255, .4);}
-    50%  {background-color: rgba(0, 0, 255, .5);}
-	60%  {background-color: rgba(0, 0, 255, .6);}
-	70%  {background-color: rgba(0, 0, 255, .7);}
-	80%  {background-color: rgba(0, 0, 255, .8);}
-	90%  {background-color: rgba(0, 0, 255, .9);}
-    100% {background-color: rgba(0, 0, 255, 1);}
+    0%   {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, 0);}
+	10%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .1);}
+    20%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .2);}
+	30%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .3);}
+	40%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .4);}
+    50%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .5);}
+	60%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .6);}
+	70%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .7);}
+	80%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .8);}
+	90%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .9);}
+    100% {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, 1);}
 }
 
 /* Standard syntax */
 @keyframes animatex {
-	0%   {background-color: rgba(0, 0, 255, 0);}
-	10%   {background-color: rgba(0, 0, 255, .1);}
-    20%  {background-color: rgba(0, 0, 255, .2);}
-	30%  {background-color: rgba(0, 0, 255, .3);}
-	40%  {background-color: rgba(0, 0, 255, .4);}
-    50%  {background-color: rgba(0, 0, 255, .5);}
-	60%  {background-color: rgba(0, 0, 255, .6);}
-	70%  {background-color: rgba(0, 0, 255, .7);}
-	80%  {background-color: rgba(0, 0, 255, .8);}
-	90%  {background-color: rgba(0, 0, 255, .9);}
-    100% {background-color: rgba(0, 0, 255, 1);}
+	0%   {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, 0);}
+	10%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .1);}
+    20%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .2);}
+	30%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .3);}
+	40%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .4);}
+    50%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .5);}
+	60%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .6);}
+	70%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .7);}
+	80%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .8);}
+	90%  {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, .9);}
+    100% {background-color: rgb(0, 0, 255); background-color: rgba(0, 0, 255, 1);}
 }
 
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes animateo {
-	0%   {background-color: rgba(255, 0, 0, 0);}
-	10%   {background-color: rgba(255, 0, 0, .1);}
-    20%  {background-color: rgba(255, 0, 0, .2);}
-	30%  {background-color: rgba(255, 0, 0, .3);}
-	40%  {background-color: rgba(255, 0, 0, .4);}
-    50%  {background-color: rgba(255, 0, 0, .5);}
-	60%  {background-color: rgba(255, 0, 0, .6);}
-	70%  {background-color: rgba(255, 0, 0, .7);}
-	80%  {background-color: rgba(255, 0, 0, .8);}
-	90%  {background-color: rgba(255, 0, 0, .9);}
-    100% {background-color: rgba(255, 0, 0, 1);}
+	0%   {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, 0);}
+	10%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .1);}
+    20%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .2);}
+	30%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .3);}
+	40%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .4);}
+    50%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .5);}
+	60%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .6);}
+	70%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .7);}
+	80%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .8);}
+	90%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .9);}
+    100% {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, 1);}
 }
 
 /* Standard syntax */
 @keyframes animateo {
-	0%   {background-color: rgba(255, 0, 0, 0);}
-	10%   {background-color: rgba(255, 0, 0, .1);}
-    20%  {background-color: rgba(255, 0, 0, .2);}
-	30%  {background-color: rgba(255, 0, 0, .3);}
-	40%  {background-color: rgba(255, 0, 0, .4);}
-    50%  {background-color: rgba(255, 0, 0, .5);}
-	60%  {background-color: rgba(255, 0, 0, .6);}
-	70%  {background-color: rgba(255, 0, 0, .7);}
-	80%  {background-color: rgba(255, 0, 0, .8);}
-	90%  {background-color: rgba(255, 0, 0, .9);}
-    100% {background-color: rgba(255, 0, 0, 1);}
+	0%   {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, 0);}
+	10%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .1);}
+    20%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .2);}
+	30%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .3);}
+	40%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .4);}
+    50%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .5);}
+	60%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .6);}
+	70%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .7);}
+	80%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .8);}
+	90%  {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, .9);}
+    100% {background-color: rgb(255, 0, 0); background-color: rgba(255, 0, 0, 1);}
 }
