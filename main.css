@@ -20,6 +20,19 @@
 	margin: 0;
 }
 
+.headerTable {
+	text-decoration: underline;
+}
+
+.scoreboard {
+	margin: auto;
+	width: 275px;
+	font-weight: bold;
+	font-size: 15pt;
+	padding: 0;
+
+}
+
 .clearButton {
 	background-color: #555555;
 	border: none;
