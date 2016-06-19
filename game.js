@@ -3,6 +3,9 @@
 var gameArray = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
 var whosTurn = 'X';
 var winnerStatus = false;
+var xWins = 0;
+var oWins = 0;
+
 start();
 
 function checkView(gameArray) {
@@ -136,6 +139,21 @@ function winner(winnerXO, arrayOfWinnerTiles) {
 
 	var infoText = document.getElementsByClassName('infoText')[0];
 	infoText.textContent = winnerXO + ' wins!!!';
+
+	if (winnerXO == 'X') {
+		xWins++;
+	}
+	else if (winnerXO == 'O'){
+		oWins++;
+	}
+	updateWins();
+}
+
+function updateWins() {
+	var xText = document.getElementById("xwins");
+	var oText = document.getElementById("owins");
+	xText.textContent = xWins;
+	oText.textContent = oWins;
 }
 
 function checkTie() {
