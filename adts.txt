@@ -1,0 +1,3 @@
+- Game manager
+- Tiles
+- Score manager
