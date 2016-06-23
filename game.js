@@ -13,56 +13,16 @@ $(document).ready(function functionName() {
 function checkView(gameArray) {
 	for (var x = 0; x < gameArray.length; x++) {
 		for (var y = 0; y < gameArray[x].length; y++) {
-			setCell(gameArray[x][y], x, y);
+			gameArray[x][y].setCell(gameArray[x][y].value);
 		}
 	}
-}
-
-function setCell(value, x, y) {
-	var cell = document.getElementById(x.toString() + y.toString());
-	if (value == 'X') {
-		cell.classList.add('x');
-		cell.textContent = 'X';
-		gameArray[x][y] = 'X';
-		checkBoard();
-		if (winnerStatus !== true) {
-			cell.classList.add('animatexclass');
-		}
-	}
-	else if (value == 'O') {
-		cell.classList.add('o');
-		cell.textContent = 'O';
-		gameArray[x][y] = 'O';
-		checkBoard();
-		if (winnerStatus !== true) {
-			cell.classList.add('animateoclass');
-		}
-	}
-	else if (value == '.'){
-		clearCell(x, y);
-	}
-}
-
-function clearCell(x, y) {
-	var cell = document.getElementById(x.toString() + y.toString());
-	if (cell.classList.contains('x')) {
-		cell.classList.remove('x');
-		cell.classList.remove('animatexclass');
-	}
-	if (cell.classList.contains('o')) {
-		cell.classList.remove('o');
-		cell.classList.remove('animateoclass');
-	}
-	if (cell.classList.contains('winnerCell')) {
-		cell.classList.remove('winnerCell');
-	}
-	cell.textContent = '';
 }
 
 function move(id) {
 	if (winnerStatus === false) {
-		if (gameArray[id[0]][id[1]] == '.') {
-			setCell(whosTurn,id[0],id[1]);
+		var cell = gameArray[id[0]][id[1]];
+		if (cell.value == '.') {
+			cell.setCell(whosTurn);
 			changeMove();
 			checkTie();
 		}
@@ -83,7 +43,7 @@ function changeMove() {
 }
 
 function clearBoard() {
-	gameArray = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
+	restart();
 	checkView(gameArray);
 	whosTurn = 'X';
 	var infoText = document.getElementsByClassName('infoText')[0];
@@ -92,15 +52,15 @@ function clearBoard() {
 }
 
 function checkBoard() {
-	var tile00 = document.getElementById('00');
-	var tile01 = document.getElementById('01');
-	var tile02 = document.getElementById('02');
-	var tile10 = document.getElementById('10');
-	var tile11 = document.getElementById('11');
-	var tile12 = document.getElementById('12');
-	var tile20 = document.getElementById('20');
-	var tile21 = document.getElementById('21');
-	var tile22 = document.getElementById('22');
+	var tile00 = gameArray[0][0].htmlTile;
+	var tile01 = gameArray[0][1].htmlTile;
+	var tile02 = gameArray[0][2].htmlTile;
+	var tile10 = gameArray[1][0].htmlTile;
+	var tile11 = gameArray[1][1].htmlTile;
+	var tile12 = gameArray[1][2].htmlTile;
+	var tile20 = gameArray[2][0].htmlTile;
+	var tile21 = gameArray[2][1].htmlTile;
+	var tile22 = gameArray[2][2].htmlTile;
 
 	if (tile00.textContent == tile10.textContent && tile00.textContent == tile20.textContent && tile00.textContent !== '') {
 		winner(tile00.textContent, ['00', '10', '20']);
@@ -163,7 +123,7 @@ function checkTie() {
 		var tilesUsed = 0;
 		for (var x = 0; x < gameArray.length; x++) {
 			for (var y = 0; y < gameArray[x].length; y++) {
-				if (gameArray[x][y] != '.') {
+				if (gameArray[x][y].value != '.') {
 					tilesUsed++;
 				}
 			}
@@ -175,5 +135,74 @@ function checkTie() {
 	}
 }
 
+function cell() {
+    this.value = ".";
+	this.xPosition = 0;
+	this.yPosition = 0;
+	this.htmlTile = document.getElementById('00');
+}
+
+cell.prototype = {
+	setCell: function (value) {
+		if (value == 'X') {
+			this.htmlTile.classList.add('x');
+			this.htmlTile.textContent = 'X';
+			this.value = 'X';
+			checkBoard();
+			if (winnerStatus !== true) {
+				this.htmlTile.classList.add('animatexclass');
+			}
+		}
+		else if (value == 'O') {
+			this.htmlTile.classList.add('o');
+			this.htmlTile.textContent = 'O';
+			this.value = 'O';
+			checkBoard();
+			if (winnerStatus !== true) {
+				this.htmlTile.classList.add('animateoclass');
+			}
+		}
+		else if (value == '.'){
+			this.clearCell();
+		}
+	},
+
+	clearCell: function () {
+		if (this.htmlTile.classList.contains('x')) {
+			this.htmlTile.classList.remove('x');
+			this.htmlTile.classList.remove('animatexclass');
+		}
+		if (this.htmlTile.classList.contains('o')) {
+			this.htmlTile.classList.remove('o');
+			this.htmlTile.classList.remove('animateoclass');
+		}
+		if (this.htmlTile.classList.contains('winnerCell')) {
+			this.htmlTile.classList.remove('winnerCell');
+		}
+		this.htmlTile.textContent = '';
+	}
+
+
+
+};
+
+
+
+
+function restart() {
+	for (var x = 0; x < gameArray.length; x++) {
+		for (var y = 0; y < gameArray[x].length; y++) {
+			var myCell = new cell();
+			myCell.xPosition = x;
+			myCell.yPosition = y;
+			myCell.htmlTile = document.getElementById(x.toString() + y.toString());
+			gameArray[x][y]=myCell;
+		}
+	}
+	checkView(gameArray);
+}
+
+
 function start() {
+	restart();
 }
