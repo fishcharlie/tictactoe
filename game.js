@@ -6,8 +6,10 @@ var winnerStatus = false;
 var xWins = 0;
 var oWins = 0;
 
-start();
 
+$(document).ready(function functionName() {
+	start();
+});
 function checkView(gameArray) {
 	for (var x = 0; x < gameArray.length; x++) {
 		for (var y = 0; y < gameArray[x].length; y++) {
