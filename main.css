@@ -28,6 +28,10 @@
 	text-decoration: underline;
 }
 
+.scoreboardlabel {
+	margin: 15px 0 0 0;
+}
+
 .scoreboard {
 	margin: auto;
 	width: 275px;
