@@ -51,6 +51,12 @@ function clearBoard() {
 	winnerStatus = false;
 }
 
+function resetScoreboard() {
+	xWins=0;
+	oWins=0;
+	updateWins();
+}
+
 function checkBoard() {
 	var tile00 = gameArray[0][0].htmlTile;
 	var tile01 = gameArray[0][1].htmlTile;
